@@ -2,20 +2,19 @@
 using namespace std;
 
 int main() {
-    int totalDetik, jam, menit, detik;
+    int total, hours, minutes, seconds;
 
     cout << "Masukkan bilangan >1 (satuan detik): ";
-    cin >> totalDetik;
+    cin >> total;
 
-    jam = totalDetik / 3600;              // 1 jam = 3600 detik
-    menit = (totalDetik % 3600) / 60;     // sisa detik dibagi 60 untuk dapat menit
-    detik = totalDetik % 60;              // sisa detik terakhir
+    hours = total / 3600;             
+    
+    minutes = (total % 3600) / 60;     
+    
+    seconds = total % 60;              
 
     cout << "\nHasil Konversi:" << endl;
-    cout << totalDetik << " detik = " 
-         << jam << " Jam, " 
-         << menit << " Menit, " 
-         << detik << " Detik." << endl;
+    cout << total << " detik = " << hours << " Jam " << minutes << " Menit " << seconds << " Detik" << endl;
 
-    return 0;
+     return 0;
 }
